@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Call Atlassian Rovo MCP deepSearch from a plain script, with OAuth sign-in and no client-side LLM",
   "type": "module",
+  "license": "MIT",
   "private": true,
   "bin": { "deepsearch": "deepsearch.mjs" },
   "scripts": { "start": "node deepsearch.mjs" },

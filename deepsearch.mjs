@@ -4,7 +4,7 @@
 // No LLM runs on the client. deepSearch needs an OAuth user token with the
 // `search:rovo:agent-interface` scope; API tokens are not supported for it.
 //
-// Site: ATLASSIAN_SITE (e.g. hello.atlassian.net), or pass --site.
+// Site: ATLASSIAN_SITE (e.g. your-site.atlassian.net), or pass --site.
 
 import http from "node:http";
 import crypto from "node:crypto";
@@ -238,7 +238,7 @@ Without a prompt, starts an interactive loop (each prompt is independent: no cha
     return;
   }
   const site = opts.site ?? process.env.ATLASSIAN_SITE;
-  if (!site) throw new Error("Set ATLASSIAN_SITE (e.g. hello.atlassian.net) or pass --site.");
+  if (!site) throw new Error("Set ATLASSIAN_SITE (e.g. your-site.atlassian.net) or pass --site.");
 
   const client = new McpClient(MCP_URL, await getAccessToken());
   await client.connect();

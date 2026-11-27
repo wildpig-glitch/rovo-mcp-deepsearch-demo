@@ -1,5 +1,7 @@
 # Rovo deepSearch over MCP (no client LLM)
 
+> **Unofficial example.** This is a community demo, not an Atlassian product, and it is not supported by Atlassian. It relies on Rovo MCP behavior that may change without notice. Provided as-is under the MIT licence.
+
 A dependency-free Node script (Node 18+) that signs the user in with OAuth, sends a prompt to the Atlassian Rovo MCP server's `deepSearch` operation, and prints Rovo's synthesized, cited answer. The app contains no LLM; Rovo does the retrieval and synthesis server-side.
 
 `deepSearch` needs an OAuth 3LO user token with the `search:rovo:agent-interface` scope. API tokens and service-account keys are not supported for it today.
